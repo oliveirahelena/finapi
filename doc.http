@@ -1,0 +1,76 @@
+### Create a customer
+
+POST http://localhost:3333/account HTTP/1.1
+Content-Type: application/json
+
+{
+    "cpf": "06362241630",
+    "name": "Helena Rocha Araújo de Oliveira"
+}
+
+### Get the statements
+
+GET http://localhost:3333/statement HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+### Make a deposit
+
+POST http://localhost:3333/deposit HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+{
+    "description": "Depósito do Ignite",
+    "amount": 1500
+}
+
+### Make a withdraw
+
+POST http://localhost:3333/withdraw HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+{
+    "description": "Saque do Ignite",
+    "amount": 500
+}
+
+### Get the statements by date
+
+GET http://localhost:3333/statement/date?date=2022-07-10 HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+### Change a customer
+
+PUT http://localhost:3333/account HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+{
+    "name": "Helena Rocha Araújo"
+}
+
+### Get a customer
+
+GET http://localhost:3333/account HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+###
+
+### Delete a customer
+
+DELETE http://localhost:3333/account HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+
+### Get the balance of customer
+
+GET http://localhost:3333/balance HTTP/1.1
+Content-Type: application/json
+cpf: 06362241630
+
+###
